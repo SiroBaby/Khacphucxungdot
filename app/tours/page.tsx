@@ -145,9 +145,10 @@ export default function Tours() {
                 </div>
             </div>
             {tours.map((tour) => (
-                <div key={tour.id}>
+                <div key={tour.id} className='mb-8'>
                     <h2>{tour.name}</h2>
-                    <p>{tour.description}</p>
+                    <p>Mô tả: {tour.description}</p>
+                    <p>Ghế còn trống: {tour.available_seats}</p>
                     <button 
                         onClick={() => bookTour(tour.id)}
                         disabled={!isLoggedIn}
